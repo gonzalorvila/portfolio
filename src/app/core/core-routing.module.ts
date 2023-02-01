@@ -10,7 +10,7 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+          import('../about/about.module').then((m) => m.AboutModule),
         pathMatch: 'full',
       },
       {
@@ -20,25 +20,25 @@ const routes: Routes = [
       {
         path: 'education',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+          import('../education/education.module').then((m) => m.EducationModule),
         pathMatch: 'full',
       },
       {
         path: 'experience',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+          import('../experience/experience.module').then((m) => m.ExperienceModule),
         pathMatch: 'full',
       },
       {
         path: 'projects',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+          import('../projects/projects.module').then((m) => m.ProjectsModule),
         pathMatch: 'full',
       },
       {
         path: 'contact',
         loadChildren: () =>
-          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+          import('../contact/contact.module').then((m) => m.ContactModule),
         pathMatch: 'full',
       },
     ]
