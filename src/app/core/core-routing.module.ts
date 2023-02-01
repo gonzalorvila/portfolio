@@ -14,9 +14,33 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'dashboard',
+        path: 'about',
         redirectTo: '',
-      }
+      },
+      {
+        path: 'education',
+        loadChildren: () =>
+          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'experience',
+        loadChildren: () =>
+          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'projects',
+        loadChildren: () =>
+          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+        pathMatch: 'full',
+      },
+      {
+        path: 'contact',
+        loadChildren: () =>
+          import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+        pathMatch: 'full',
+      },
     ]
   }
 ];

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CoreComponent } from './core.component';
 import { CoreRoutingModule } from './core-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { HeaderModule } from '../header/header.module';
 
 
 
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    SharedModule
+    SharedModule,
+    HeaderModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
