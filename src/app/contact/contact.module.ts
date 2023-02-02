@@ -12,7 +12,6 @@ import { ContactRoutingModule } from './contact-routing.module';
   ],
   imports: [
     CommonModule,
-    ContactRoutingModule,
     SharedModule
   ],
   exports: [

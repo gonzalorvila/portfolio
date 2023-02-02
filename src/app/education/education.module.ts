@@ -13,7 +13,6 @@ import { EducationRoutingModule } from './education-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    EducationRoutingModule
   ],
   exports: [
     EducationComponent

@@ -1,7 +1,42 @@
+#header-toolbar {
+  background-color: #00334d;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+#header-toolbar-title {
+  color: white;
+}
+
 .flex-spacer {
   flex-grow: 1;
 }
 
-.header-button {
-  padding: 0 16px;
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.nav-link {
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 0.7142em;
+  line-height: 1.625rem;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }

@@ -13,7 +13,6 @@ import { ExperienceRoutingModule } from './experience-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    ExperienceRoutingModule
   ],
   exports: [
     ExperienceComponent

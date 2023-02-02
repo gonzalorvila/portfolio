@@ -4,6 +4,11 @@ import { CoreComponent } from './core.component';
 import { CoreRoutingModule } from './core-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderModule } from '../header/header.module';
+import { AboutModule } from '../about/about.module';
+import { EducationModule } from '../education/education.module';
+import { ExperienceModule } from '../experience/experience.module';
+import { ProjectsModule } from '../projects/projects.module';
+import { ContactModule } from '../contact/contact.module';
 
 
 
@@ -15,7 +20,12 @@ import { HeaderModule } from '../header/header.module';
     CommonModule,
     CoreRoutingModule,
     SharedModule,
-    HeaderModule
+    HeaderModule,
+    AboutModule,
+    EducationModule,
+    ExperienceModule,
+    ProjectsModule,
+    ContactModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

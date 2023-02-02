@@ -13,7 +13,6 @@ import { ProjectsRoutingModule } from './projects-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    ProjectsRoutingModule
   ],
   exports: [
     ProjectsComponent
