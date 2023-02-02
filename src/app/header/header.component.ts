@@ -11,9 +11,6 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   public routeTo(route: string): void {
-    console.log(route)
-    const url = this.router.url.split('/')
-    console.log(url)
     this.router.navigate([`/${route}`])
   }
 
