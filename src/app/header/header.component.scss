@@ -8,17 +8,23 @@
   color: white;
 }
 
+#header-chevron-button {
+  color: white;
+  background-color: #00334d;
+}
+
 .flex-spacer {
   flex-grow: 1;
 }
 
-.navbar-nav {
+#navbar-nav {
   display: flex;
   flex-direction: row;
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
-  padding-left: 0;
+  padding-left: 16px;
+  overflow-y: auto;
 }
 
 .nav-item:not(:last-child) {
