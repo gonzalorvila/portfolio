@@ -1,11 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, HostListener } from '@angular/core';
-
-export interface Tile {
-  cols: number;
-  rows: number;
-  name: string;
-}
+import { Tile } from '../core/core.component';
 
 @Component({
   selector: 'app-about',
@@ -49,7 +44,7 @@ export class AboutComponent {
     } else {
       this.rowHeight = "100px";
     }
-    if (event.target.innerWidth < 372) {
+    if (event.target.innerWidth <= 495) {
       this.tiles[0].cols = this.gridCols;
       this.tiles[0].rows = 1;
       this.tiles[1].cols = this.gridCols;
@@ -84,7 +79,7 @@ export class AboutComponent {
     } else {
       this.rowHeight = "100px";
     }
-    if (window.innerWidth < 372) {
+    if (window.innerWidth <= 495) {
       this.tiles[0].cols = this.gridCols;
       this.tiles[0].rows = 1;
       this.tiles[1].cols = this.gridCols;

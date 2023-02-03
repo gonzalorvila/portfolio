@@ -1,4 +1,5 @@
-<mat-grid-list #grid id="about" [cols]="gridCols" [rowHeight]="rowHeight">
+<div id="about"></div>
+<mat-grid-list #grid id="about-grid-list" [cols]="gridCols" [rowHeight]="rowHeight">
   <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows">
     <mat-card class="about-page-card" id="about-image-card">
       <img mat-card-lg-image
@@ -38,7 +39,7 @@
         </div>
         <div class="about-page-info-row">
           <div class="about-page-info-row-title"><strong>Email:</strong></div>
-          <div class="about-page-info-row-content">gonzalorvila99@gmail.com</div>
+          <div class="about-page-info-row-content" id="email-content">gonzalorvila99@gmail.com</div>
         </div>
         <div class="about-page-info-row">
           <div class="about-page-info-row-title"><strong>Degree:</strong></div>
