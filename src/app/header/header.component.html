@@ -1,5 +1,8 @@
 <mat-toolbar id="header-toolbar">
-  <span id="header-toolbar-title">Gonzalo's Portfolio</span>
+  <span id="header-toolbar-title" *ngIf="showFullTitle; else shortTitle">Gonzalo's Portfolio</span>
+  <ng-template #shortTitle>
+    <span id="header-toolbar-title">GR</span>
+  </ng-template>
   <span class="flex-spacer"></span>
     <ul id="navbar-nav">
       <li class="nav-item">

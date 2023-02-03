@@ -14,11 +14,22 @@ export class HeaderComponent {
     } else {
       this.showChevron = false;
     }
+    if (event.target.innerWidth <= 460) {
+      this.showFullTitle = false;
+    } else {
+      this.showFullTitle = true;
+    }
   }
 
-  public showChevron = false;
+  public showChevron: boolean = false;
+  public showFullTitle: boolean = true;
 
   constructor(private router: Router) {
+    if (window.innerWidth <= 460) {
+      this.showFullTitle = false;
+    } else {
+      this.showFullTitle = true;
+    }
     if (window.innerWidth < 697) {
       this.showChevron = true;
     } else {
