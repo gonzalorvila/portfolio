@@ -1,0 +1,14 @@
+<mat-card class="projects-card">
+  <img mat-card-image id="project-card-image" [src]="projectImage" alt="Project 1">
+  <mat-card-header>
+    <mat-card-title>{{projectName}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{projectDescription}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [href]="projectLink" target="_blank">
+      View on GitHub
+    </a>
+  </mat-card-actions>
+</mat-card>

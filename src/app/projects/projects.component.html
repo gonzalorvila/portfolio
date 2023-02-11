@@ -1,1 +1,15 @@
-<p>projects works!</p>
+<div class="projects-section">
+  <h2 class="pate-title">Projects</h2>
+  <div class="projects-card-container" *ngFor="let project of projects; let i = index;" [ngClass]="{'active': i === currentCard, 'inactive': i !== currentCard}">
+    <app-project-card
+      [projectName]="project.name"
+      [projectDescription]="project.description"
+      [projectLink]="project.link"
+      [projectImage]="project.imageUrl">
+    </app-project-card>
+  </div>
+  <div class="navigation-buttons">
+    <button mat-button class="previous-button" (click)="previousCard()">Previous</button>
+    <button mat-button class="next-button" (click)="nextCard()">Next</button>
+  </div>
+</div>
