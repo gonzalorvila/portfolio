@@ -62,6 +62,10 @@ app-experience {
 
   .experience-page-panel > .mat-expansion-panel-content {
     background-color: beige;
+    font-family: Poppins, sans-serif !important;
+  }
+  .mat-expansion-panel-header {
+    font-family: Poppins, sans-serif !important;
   }
 
 }
