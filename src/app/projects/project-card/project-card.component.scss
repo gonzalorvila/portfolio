@@ -1,13 +1,24 @@
-.projects-card {
-  max-width: 500px;
+.project-card {
+  max-width: 750px;
   margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: beige;
+}
+
+#project-card-name {
+  font-family: Poppins, sans-serif;
 }
 
 #project-card-image {
-  height: 200px;
-  width: 200px;
+  height: 250px;
   object-fit: cover;
+  padding: 1em;
+  width: 100%;
+}
+
+#project-card-github-button {
+  background-color: #00334d;
+  color: white;
 }

@@ -1,13 +1,14 @@
-<mat-card class="projects-card">
-  <img mat-card-image id="project-card-image" [src]="projectImage" alt="Project 1">
+<mat-card class="project-card">
   <mat-card-header>
-    <mat-card-title>{{projectName}}</mat-card-title>
+    <mat-icon mat-card-avatar *ngIf="projectIcon">{{projectIcon}}</mat-icon>
+    <mat-card-title id="project-card-name">{{projectName}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
+    <img mat-card-image id="project-card-image" *ngIf="projectImage" [src]="projectImage" alt="Project 1">
     <p>{{projectDescription}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-button [href]="projectLink" target="_blank">
+    <a mat-raised-button id="project-card-github-button" [href]="projectLink" target="_blank">
       View on GitHub
     </a>
   </mat-card-actions>
