@@ -103,9 +103,22 @@ app-experience {
 
 }
 
-#contact-page-info-tile {
-  .mat-grid-tile-content {
-    justify-content: flex-start;
-    align-items: flex-start;
+
+app-contact {
+  #contact-page-info-tile {
+    .mat-grid-tile-content {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
+
+  #contact-page-form-tile {
+    .mat-grid-tile-content {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.email-sent-snackbar * {
+  font-family: Poppins, sans-serif !important;
 }
