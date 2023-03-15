@@ -1,1 +1,41 @@
-<p>contact works!</p>
+<div id="contact">
+  <div class="page-title">Contact Me</div>
+  <mat-grid-list #grid id="contact-grid-list" cols="5" rowHeight="500px">
+    <mat-grid-tile colspan="3" rowspan="1">
+      <div id="contact-form">
+        <mat-form-field appearance="fill" class="contact-input">
+          <mat-label>Name</mat-label>
+          <span matPrefix color="primary"><mat-icon>person</mat-icon></span>
+          <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="contact-input">
+          <mat-label>Email</mat-label>
+          <span matPrefix><mat-icon>mail</mat-icon></span>
+          <input matInput type="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="contact-input">
+          <mat-label>Subject</mat-label>
+          <span matPrefix><mat-icon>topic</mat-icon></span>
+          <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="contact-input">
+          <mat-label>Message</mat-label>
+          <textarea matInput rows="5" id="contact-page-message-textarea"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Send</button>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1" id="contact-page-info-tile">
+      <div id="contact-page-info-content">
+        <p>
+          <strong>Phone</strong>
+        </p>
+        <p>+34 618 318 904</p>
+        <p>
+          <strong>Email</strong>
+        </p>
+        <p>gonzalorvila99@gmail.com</p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

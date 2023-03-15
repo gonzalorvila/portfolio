@@ -102,3 +102,10 @@ app-experience {
   }
 
 }
+
+#contact-page-info-tile {
+  .mat-grid-tile-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
