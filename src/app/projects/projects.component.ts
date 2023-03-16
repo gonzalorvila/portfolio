@@ -25,8 +25,15 @@ export class ProjectsComponent {
       link: 'https://github.com/gonzalorvila/BattleshipGame'
     },
     {
+      name: 'AI@SLU',
+      description:
+        "AI@SLU is an initiative founded by Saint Louis University to establish itself as one of the leaders in AI research in the St. Louis region. As a final project for Web Technologies class, my team and I were asked to rebuild and redesign the content and structure of their Google Sites website to adhere to the CS SLU website guidelines. This project was built using React, Node, MongoDB, and Express.",
+      imageUrl: '../../../assets/ai@slu-react.png',
+      link: 'https://github.com/gonzalorvila/AI-SLU'
+    },
+    {
       name: 'SLUSH',
-      description: 'SLUSH is a very simple command-line interpreter with different syntax and less functionality than traditional shells. It executes a loop to display a prompt, reads command line input, and executes it. The syntax of slush is backwards from other shells, and means to emphasize functional nature of pipeline commands. SLUSH also catches ^C command to interrupt the command running. This program was written in C for Operating Systems class.',
+      description: 'SLUSH is a very simple command-line interpreter with different syntax and less functionality than traditional shells. It executes a loop to display a prompt, reads command line input, and executes it. The syntax of SLUSH is backwards from other shells, and means to emphasize functional nature of pipeline commands. SLUSH also catches ^C command to interrupt the command running. This program was written in C for Operating Systems class.',
       icon: 'keyboard_command_key',
       link: 'https://github.com/gonzalorvila/SLUShell'
     },
