@@ -33,7 +33,8 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/portfolio/"
           },
           "configurations": {
             "production": {
@@ -49,7 +50,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/portfolio/"
             },
             "development": {
               "buildOptimizer": false,
