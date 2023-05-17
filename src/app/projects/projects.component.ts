@@ -21,14 +21,14 @@ export class ProjectsComponent {
       name: 'Java Battleship',
       description:
         "Battleship-style game built using Java and the JavaSWiNG toolkit. Collaborated with a team to create a final project for Object Oriented Software Design class. Each player has 5 boats to place on a 10x10 grid, with the objective of sinking their opponent's ships by guessing a grid location on each turn.",
-      imageUrl: '/src/assets/battleship-java.png',
+      imageUrl: 'assets/battleship-java.png',
       link: 'https://github.com/gonzalorvila/BattleshipGame'
     },
     {
       name: 'AI@SLU',
       description:
         "AI@SLU is an initiative founded by Saint Louis University to establish itself as one of the leaders in AI research in the St. Louis region. As a final project for Web Technologies class, my team and I were asked to rebuild and redesign the content and structure of their Google Sites website to adhere to the CS SLU website guidelines. This project was built using React, Node, MongoDB, and Express.",
-      imageUrl: '/src/assets/ai@slu-react.png',
+      imageUrl: 'assets/ai@slu-react.png',
       link: 'https://github.com/gonzalorvila/AI-SLU'
     },
     {
