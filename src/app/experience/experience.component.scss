@@ -15,11 +15,6 @@
   &:first-of-type {
     margin-top: 2em !important;
   }
-
-  @media (max-width: calc(1100px + 2em)) {
-    margin-right: 1em;
-    margin-left: 1em;
-  }
 }
 
 .experience-header-right-align,
