@@ -2,10 +2,6 @@
   margin: 2em auto;
 }
 
-#experience-bundlar-panel {
-  margin-top: 2em;
-}
-
 .experience-page-panel {
   border-radius: 4px !important;
   margin: auto;
@@ -14,6 +10,15 @@
 
   .mat-expansion-panel-content {
     background-color: beige;
+  }
+
+  &:first-of-type {
+    margin-top: 2em !important;
+  }
+
+  @media (max-width: calc(1100px + 2em)) {
+    margin-right: 1em;
+    margin-left: 1em;
   }
 }
 
