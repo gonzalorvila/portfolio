@@ -2,6 +2,12 @@
   margin: 2em auto;
 }
 
+#experience-date {
+  @media (max-width: 495px) {
+    display: none;
+  }
+}
+
 .experience-page-panel {
   border-radius: 4px !important;
   margin: auto;

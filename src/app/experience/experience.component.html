@@ -6,7 +6,7 @@
         <mat-panel-title class="education-white-text">
           {{ job.position }}, {{ job.company }}
         </mat-panel-title>
-        <mat-panel-description class="education-white-text">{{ job.date }}</mat-panel-description>
+        <mat-panel-description id="experience-date" class="education-white-text">{{ job.date }}</mat-panel-description>
       </mat-expansion-panel-header>
       <ul>
         <li *ngFor="let descItem of job.description">
