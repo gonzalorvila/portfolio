@@ -2,8 +2,10 @@
   margin: 2em auto;
 }
 
-#experience-bundlar-panel {
-  margin-top: 2em;
+#experience-date {
+  @media (max-width: 495px) {
+    display: none;
+  }
 }
 
 .experience-page-panel {
@@ -14,6 +16,10 @@
 
   .mat-expansion-panel-content {
     background-color: beige;
+  }
+
+  &:first-of-type {
+    margin-top: 2em !important;
   }
 }
 

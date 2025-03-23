@@ -1,67 +1,17 @@
 <div id="experience">
   <div class="page-title">My Experience</div>
   <mat-accordion id="experience-page-accordion">
-    <mat-expansion-panel expanded="true" id="experience-bundlar-panel" class="experience-page-panel">
+    <mat-expansion-panel *ngFor="let job of jobExperiences" expanded="{{ job.expanded? job.expanded : false }}" class="experience-page-panel">
       <mat-expansion-panel-header class="experience-header-right-align">
         <mat-panel-title class="education-white-text">
-          Software Engineer 2, Minsait
+          {{ job.position }}, {{ job.company }}
         </mat-panel-title>
-        <mat-panel-description class="education-white-text">2023-Present</mat-panel-description>
+        <mat-panel-description id="experience-date" class="education-white-text">{{ job.date }}</mat-panel-description>
       </mat-expansion-panel-header>
       <ul>
-        <li>Implement and maintain major features of the Booking Engine, Booking Manager, and Corporate site for a major European airline using Angular, Typescript, HTMl, and SCSS.</li>
-        <li>Own end-to-end front-end implementation of large scale features, developing new components, optimizing data management, and integrating APIs.</li>
-        <li>Work closely with back-end engineers to integrate and refine API endpoints, ensuring seamless data flow and system performance.</li>
-        <li>Collaborate with client eCommerce, UX, and QA teams to transform mockups into polished UIs, address technical concerns, and ensure smooth feature deployments.</li>
-        <li>Improve system reliability and business performance by identifying and resolving critical bugs in the high-traffic booking engine.</li>
-        <li>Engage in Agile development, using regular check-ins and code reviews, ensuring high quality, maintainable code across the front-end team.</li>
-      </ul>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel id="experience-bundlar-panel" class="experience-page-panel">
-      <mat-expansion-panel-header class="experience-header-right-align">
-        <mat-panel-title class="education-white-text">
-          Jr. Software Developer, BUNDLAR
-        </mat-panel-title>
-        <mat-panel-description class="education-white-text">2021-2023</mat-panel-description>
-      </mat-expansion-panel-header>
-      <ul>
-        <li>Developed and maintained front-end features on an Angular CMS project using HTML, CSS, and TypeScript.</li>
-        <li>Worked in an agile team with daily stand-ups, kept track of tickets and user stories on Jira, and participated in sprint planning and story generation meetings.</li>
-        <li>Worked closely with Product and UX teams to understand feature requests and give feedback on user stories.</li>
-        <li>Led and planned the development efforts of multiple features, including the redesign of multiple pages within the CMS, as well as a total refactor of global styles.</li>
-        <li>Collaborated with backend team to implement features that made API requests or integrated both front and backend systems.</li>
-        <li>Set up automated testing framework for the QA team using Cypress. Helped maintain automated tests when new features were added.</li>
-        <li>Mentored a junior developer, enabling them to quickly get onboarded, learn the system, and start working on features.</li>
-        <li>Pair programmed with other engineers and reviewed their code to ensure that only high-quality, error-free codewas merged.</li>
-      </ul>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel class="experience-page-panel">
-      <mat-expansion-panel-header class="experience-header-right-align">
-        <mat-panel-title class="education-white-text">
-          Campus Ambassador, Saint Louis University - Madrid Campus
-        </mat-panel-title>
-        <mat-panel-description class="education-white-text">2017-2019</mat-panel-description>
-      </mat-expansion-panel-header>
-      <ul>
-        <li>Worked with the Student Life office to organize and run events such as orientation for approximately 200 students each semester.</li>
-        <li>Planned and chaperoned group trips for approximately 100 students to cities surrounding Madrid.</li>
-        <li>Managed and organized events for up to 70 university students including graduation, advised students as an orientation leader and first contact, responded to frequently asked questions, collaborated with university staff, participated in student panels and represented the university.</li>
-      </ul>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel class="experience-page-panel">
-      <mat-expansion-panel-header class="experience-header-right-align">
-        <mat-panel-title class="education-white-text">
-          IT Assistant, Saint Louis University - Madrid Campus
-        </mat-panel-title>
-        <mat-panel-description class="education-white-text">2017-2018</mat-panel-description>
-      </mat-expansion-panel-header>
-      <ul>
-        <li>Worked at the it office in Saint Louis University Madrid Campus.</li>
-        <li>Updated computers and helped students and profeessors with any technical difficulties.</li>
-        <li>Kept inventory of all computers, monitors, and other accessories of Saint Louis University.</li>
+        <li *ngFor="let descItem of job.description">
+          {{ descItem }}
+        </li>
       </ul>
     </mat-expansion-panel>
   </mat-accordion>
