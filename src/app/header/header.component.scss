@@ -2,11 +2,19 @@
   background-color: #00334d;
   font-size: 18px;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
 }
 
 #header-toolbar-title {
   color: white;
   padding-right: 1em;
+  text-decoration: none;
+}
+
+.short-title,
+#header-chevron-button {
+  display: none;
 }
 
 #header-chevron-button {
@@ -21,7 +29,8 @@
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 16px;
-  overflow-y: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .nav-item:not(:last-child) {
@@ -42,4 +51,26 @@
 
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link:focus-visible,
+#header-toolbar-title:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+@media (max-width: 696px) {
+  #header-chevron-button {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 460px) {
+  .full-title {
+    display: none;
+  }
+
+  .short-title {
+    display: inline;
+  }
 }

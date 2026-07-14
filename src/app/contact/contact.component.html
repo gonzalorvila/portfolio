@@ -1,43 +1,41 @@
-<div id="contact">
-  <div class="page-title">Contact Me</div>
-  <mat-grid-list #grid id="contact-grid-list" cols="5" rowHeight="500px">
-    <!-- Contact Form Tile -->
-    <mat-grid-tile colspan="3" rowspan="1" id="contact-page-form-tile">
+<section id="contact" aria-labelledby="contact-title">
+  <h2 class="page-title" id="contact-title">Contact Me</h2>
+  <div id="contact-grid-list">
+    <div id="contact-page-form-tile">
       <form id="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div id="contact-form-content">
-          <!-- Name Form Field -->
           <mat-form-field appearance="fill" class="contact-input">
             <mat-label>Name</mat-label>
             <span matPrefix color="primary"><mat-icon>person</mat-icon></span>
             <input matInput type="text" name="name" ngModel required #name="ngModel">
+            <mat-error *ngIf="name.invalid && name.touched">Please enter your name.</mat-error>
           </mat-form-field>
-          <!-- Email Form Field -->
           <mat-form-field appearance="fill" class="contact-input">
             <mat-label>Email</mat-label>
             <span matPrefix><mat-icon>mail</mat-icon></span>
-            <input matInput type="email" name="email" email="true" ngModel required #email="ngModel">
+            <input matInput type="email" name="email" email ngModel required #email="ngModel">
+            <mat-error *ngIf="email.invalid && email.touched">Please enter a valid email address.</mat-error>
           </mat-form-field>
-          <!-- Message Form Field  -->
           <mat-form-field appearance="fill" class="contact-input">
             <mat-label>Message</mat-label>
             <textarea matInput rows="8" id="contact-form-message-textarea" name="message" ngModel required #message="ngModel"></textarea>
+            <mat-error *ngIf="message.invalid && message.touched">Please enter a message.</mat-error>
           </mat-form-field>
-          <button mat-raised-button color="primary" type="submit" value="Send" [disabled]="!contactForm.valid">Send</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
+            {{ isSubmitting ? 'Sending…' : 'Send' }}
+          </button>
         </div>
-    </form>
-    </mat-grid-tile>
-    <!-- Contact Info Tile -->
-    <mat-grid-tile colspan="2" rowspan="1" id="contact-page-info-tile">
+      </form>
+    </div>
+    <aside id="contact-page-info-tile" aria-label="Contact details">
       <div id="contact-page-info-content">
-        <p>
-          <strong>Phone</strong>
-        </p>
-        <p>+34 618 318 904</p>
+        <p><strong>Location</strong></p>
+        <p>Madrid, Spain</p>
         <p>
           <strong>Email</strong>
         </p>
-        <p>gonzalorvila99@gmail.com</p>
+        <p><a href="mailto:gonzalorvila99@gmail.com">gonzalorvila99@gmail.com</a></p>
       </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
+    </aside>
+  </div>
+</section>

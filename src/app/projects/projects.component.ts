@@ -39,20 +39,18 @@ export class ProjectsComponent {
     },
     {
       name: 'Crack',
-      description: 'Crack is a multi-threaded brute password cracking program that attempts to find the password of a target DES hash given a keysize. It does this by extracting the salt of the hash and repeatedly calling crypt() function with all possible lowercase pawsswords of the specified keysize. This program was written in C for Operating Systems class.',
+      description: 'Crack is a multi-threaded brute-force password cracking program that attempts to find the password of a target DES hash given a key size. It extracts the salt from the hash and repeatedly calls the crypt() function with all possible lowercase passwords of the specified size. This program was written in C for an Operating Systems class.',
       icon: 'lock_open',
       link: 'https://github.com/gonzalorvila/Crack'
     },
   ]
 
 
-  constructor() {}
-
-  public previousCard() {
+  public previousCard(): void {
     this.currentCard = this.currentCard > 0 ? this.currentCard - 1 : this.projects.length - 1;
   }
 
-  public nextCard() {
+  public nextCard(): void {
     this.currentCard = this.currentCard < this.projects.length - 1 ? this.currentCard + 1 : 0;
   }
 
