@@ -1,40 +1,54 @@
-<section id="contact" aria-labelledby="contact-title">
-  <h2 class="page-title" id="contact-title">Contact Me</h2>
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <header class="section-heading">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="page-title" id="contact-title">Let’s connect.</h2>
+    <p class="section-intro">Have a role or project in mind? Send me a message.</p>
+  </header>
+
   <div id="contact-grid-list">
     <div id="contact-page-form-tile">
       <form id="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div id="contact-form-content">
-          <mat-form-field appearance="fill" class="contact-input">
+          <mat-form-field appearance="outline" class="contact-input">
             <mat-label>Name</mat-label>
-            <span matPrefix color="primary"><mat-icon>person</mat-icon></span>
             <input matInput type="text" name="name" ngModel required #name="ngModel">
             <mat-error *ngIf="name.invalid && name.touched">Please enter your name.</mat-error>
           </mat-form-field>
-          <mat-form-field appearance="fill" class="contact-input">
+          <mat-form-field appearance="outline" class="contact-input">
             <mat-label>Email</mat-label>
-            <span matPrefix><mat-icon>mail</mat-icon></span>
             <input matInput type="email" name="email" email ngModel required #email="ngModel">
             <mat-error *ngIf="email.invalid && email.touched">Please enter a valid email address.</mat-error>
           </mat-form-field>
-          <mat-form-field appearance="fill" class="contact-input">
+          <mat-form-field appearance="outline" class="contact-input">
             <mat-label>Message</mat-label>
-            <textarea matInput rows="8" id="contact-form-message-textarea" name="message" ngModel required #message="ngModel"></textarea>
+            <textarea matInput rows="6" id="contact-form-message-textarea" name="message" ngModel required #message="ngModel"></textarea>
             <mat-error *ngIf="message.invalid && message.touched">Please enter a message.</mat-error>
           </mat-form-field>
-          <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
-            {{ isSubmitting ? 'Sending…' : 'Send' }}
+          <button mat-flat-button class="submit-button" type="submit" [disabled]="contactForm.invalid || isSubmitting">
+            {{ isSubmitting ? 'Sending…' : 'Send message' }}
+            <mat-icon *ngIf="!isSubmitting" aria-hidden="true">arrow_forward</mat-icon>
           </button>
         </div>
       </form>
     </div>
     <aside id="contact-page-info-tile" aria-label="Contact details">
       <div id="contact-page-info-content">
-        <p><strong>Location</strong></p>
-        <p>Madrid, Spain</p>
-        <p>
-          <strong>Email</strong>
-        </p>
-        <p><a href="mailto:gonzalorvila99@gmail.com">gonzalorvila99@gmail.com</a></p>
+        <div class="location-line">
+          <mat-icon aria-hidden="true">location_on</mat-icon>
+          <span>Madrid, Spain</span>
+        </div>
+
+        <a class="contact-link primary-contact-link" href="mailto:gonzalorvila99@gmail.com">
+          <span>Email</span>
+          <strong>gonzalorvila99@gmail.com</strong>
+          <mat-icon aria-hidden="true">north_east</mat-icon>
+        </a>
+
+        <a class="contact-link" href="https://github.com/gonzalorvila" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <strong>@gonzalorvila</strong>
+          <mat-icon aria-hidden="true">north_east</mat-icon>
+        </a>
       </div>
     </aside>
   </div>

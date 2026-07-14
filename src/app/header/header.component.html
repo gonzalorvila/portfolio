@@ -1,29 +1,45 @@
 <mat-toolbar id="header-toolbar">
-  <a id="header-toolbar-title" href="#about" aria-label="Go to the top of Gonzalo's portfolio">
-    <span class="full-title">Gonzalo's Portfolio</span>
-    <span class="short-title" aria-hidden="true">GR</span>
+  <a id="header-toolbar-title" href="#about" (click)="selectSection('about')" aria-label="Go to the top of Gonzalo's portfolio">
+    <span class="logo-mark" aria-hidden="true">GR</span>
+    <span class="logo-name">Gonzalo Rodriguez-Vila</span>
   </a>
   <span class="flex-spacer"></span>
-    <ul id="navbar-nav">
+    <ul id="navbar-nav" [class.menu-open]="menuOpen">
       <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#about" (click)="selectSection('about')" [class.active]="activeSection === 'about'" [attr.aria-current]="activeSection === 'about' ? 'page' : null">About</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#experience" (click)="selectSection('experience')" [class.active]="activeSection === 'experience'" [attr.aria-current]="activeSection === 'experience' ? 'page' : null">Experience</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#projects" (click)="selectSection('projects')" [class.active]="activeSection === 'projects'" [attr.aria-current]="activeSection === 'projects' ? 'page' : null">Projects</a>
       </li>
-      <li class="nav-item" id="header-navbar-contact">
-        <a class="nav-link" href="#contact">Contact</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#education" (click)="selectSection('education')" [class.active]="activeSection === 'education'" [attr.aria-current]="activeSection === 'education' ? 'page' : null">Education</a>
+      </li>
+      <li class="nav-item nav-contact">
+        <a class="nav-link" href="#contact" (click)="selectSection('contact')" [class.active]="activeSection === 'contact'" [attr.aria-current]="activeSection === 'contact' ? 'page' : null">Let's talk</a>
       </li>
     </ul>
-    <button mat-icon-button id="header-chevron-button" (click)="scrollRight()" aria-label="Show more navigation links">
-      <mat-icon>chevron_right</mat-icon>
+    <button
+      mat-icon-button
+      id="theme-toggle"
+      type="button"
+      (click)="toggleTheme()"
+      [attr.aria-label]="isDarkMode ? 'Use light theme' : 'Use dark theme'"
+      [title]="isDarkMode ? 'Use light theme' : 'Use dark theme'">
+      <mat-icon>{{ isDarkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      id="header-menu-button"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="navbar-nav"
+      aria-label="Toggle navigation menu">
+      <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
     </button>
 </mat-toolbar>
