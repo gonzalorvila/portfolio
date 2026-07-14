@@ -16,10 +16,12 @@ export class CoreComponent implements AfterViewInit, OnDestroy {
       '.hero-visual',
       '.about-surface',
       '#education-grid-list',
+      '.education-section .section-heading',
       '.experience-section .section-heading',
       '.timeline-item',
       '.projects-section .section-heading',
       'app-project-card',
+      '.contact-section .section-heading',
       '#contact-grid-list'
     ].join(',')));
 

@@ -7,14 +7,38 @@
     font-family: var(--font-body) !important;
   }
 
-  .mat-icon {
-    color: var(--color-primary);
-    margin-inline: 0.25rem 0.5rem;
-  }
 }
 
-#contact {
-  padding-bottom: 3rem;
+.contact-section {
+  margin: 0 auto;
+  max-width: var(--page-width);
+  padding: 0 1.5rem clamp(4rem, 8vw, 7rem);
+}
+
+.section-heading {
+  margin: 0 auto clamp(2rem, 5vw, 3.5rem);
+  max-width: 680px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.85rem;
+  padding-top: var(--section-space);
+  text-transform: uppercase;
+}
+
+.page-title {
+  padding-top: 0;
+}
+
+.section-intro {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin: 1rem auto 0;
 }
 
 #contact-grid-list {
@@ -24,9 +48,9 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(220px, 2fr);
-  margin: 2em auto;
-  max-width: 900px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.8fr);
+  margin: 0 auto;
+  max-width: 980px;
   overflow: hidden;
   transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 
@@ -41,12 +65,34 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.5rem;
+  gap: 0.15rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   width: 100%;
 
   button {
     align-self: flex-start;
+  }
+}
+
+.submit-button {
+  background: var(--color-text) !important;
+  border-radius: 999px;
+  color: var(--color-surface-solid) !important;
+  font-family: var(--font-body);
+  font-weight: 700;
+  min-height: 46px;
+  padding-inline: 1.25rem;
+
+  mat-icon {
+    font-size: 1.05rem;
+    height: 1.05rem;
+    margin-left: 0.35rem;
+    transition: transform 180ms ease;
+    width: 1.05rem;
+  }
+
+  &:hover:not([disabled]) mat-icon {
+    transform: translateX(3px);
   }
 }
 
@@ -60,22 +106,77 @@
 }
 
 #contact-page-info-tile {
-  background: linear-gradient(145deg, rgb(79 70 229 / 8%), rgb(6 182 212 / 8%));
+  background:
+    radial-gradient(circle at 90% 10%, rgb(6 182 212 / 11%), transparent 42%),
+    linear-gradient(145deg, rgb(79 70 229 / 9%), rgb(6 182 212 / 5%));
+  border-left: 1px solid var(--color-border);
   min-width: 0;
 }
 
 #contact-page-info-content {
   box-sizing: border-box;
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
 
-  p {
-    line-height: 1.5;
-    margin: 0 0 0.5rem;
-    overflow-wrap: anywhere;
+.location-line {
+  align-items: center;
+  color: var(--color-muted);
+  display: flex;
+  font-size: 0.82rem;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+
+  mat-icon {
+    color: var(--color-primary);
+    font-size: 1.05rem;
+    height: 1.05rem;
+    width: 1.05rem;
+  }
+}
+
+.contact-link {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: 1fr auto;
+  margin-top: 1.25rem;
+  overflow-wrap: anywhere;
+  padding-top: 1.25rem;
+  text-decoration: none;
+
+  span {
+    color: var(--color-primary);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
-  p:nth-of-type(3) {
-    margin-top: 1.5rem;
+  strong {
+    font-size: 0.86rem;
+    font-weight: 600;
+    grid-column: 1;
+  }
+
+  mat-icon {
+    font-size: 1rem;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 1rem;
+    transition: transform 180ms ease;
+    width: 1rem;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:hover mat-icon {
+    transform: translate(2px, -2px);
   }
 }
 
@@ -84,22 +185,25 @@
 }
 
 @media (max-width: 700px) {
-  #contact-grid-list {
-    grid-template-columns: 1fr;
-    margin-inline: 1rem;
+  .contact-section {
+    padding-inline: 1rem;
   }
 
-  #contact-form-content,
-  #contact-page-info-content {
-    padding: 1.5rem;
+  #contact-grid-list {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-page-info-tile {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .location-line {
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 420px) {
-  #contact-grid-list {
-    margin-inline: 0;
-  }
-
   #contact-form-content,
   #contact-page-info-content {
     padding: 1.25rem;
