@@ -1,9 +1,37 @@
 <mat-toolbar id="header-toolbar">
-  <a id="header-toolbar-title" href="#about" (click)="closeMenu()" aria-label="Go to the top of Gonzalo's portfolio">
+  <a id="header-toolbar-title" href="#about" (click)="selectSection('about')" aria-label="Go to the top of Gonzalo's portfolio">
     <span class="logo-mark" aria-hidden="true">GR</span>
     <span class="logo-name">Gonzalo Rodriguez-Vila</span>
   </a>
   <span class="flex-spacer"></span>
+    <ul id="navbar-nav" [class.menu-open]="menuOpen">
+      <li class="nav-item">
+        <a class="nav-link" href="#about" (click)="selectSection('about')" [class.active]="activeSection === 'about'" [attr.aria-current]="activeSection === 'about' ? 'page' : null">About</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#experience" (click)="selectSection('experience')" [class.active]="activeSection === 'experience'" [attr.aria-current]="activeSection === 'experience' ? 'page' : null">Experience</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#projects" (click)="selectSection('projects')" [class.active]="activeSection === 'projects'" [attr.aria-current]="activeSection === 'projects' ? 'page' : null">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education" (click)="selectSection('education')" [class.active]="activeSection === 'education'" [attr.aria-current]="activeSection === 'education' ? 'page' : null">Education</a>
+      </li>
+      <li class="nav-item nav-contact">
+        <a class="nav-link" href="#contact" (click)="selectSection('contact')" [class.active]="activeSection === 'contact'" [attr.aria-current]="activeSection === 'contact' ? 'page' : null">Let's talk</a>
+      </li>
+    </ul>
+    <button
+      mat-icon-button
+      id="theme-toggle"
+      type="button"
+      (click)="toggleTheme()"
+      [attr.aria-label]="isDarkMode ? 'Use light theme' : 'Use dark theme'"
+      [title]="isDarkMode ? 'Use light theme' : 'Use dark theme'">
+      <mat-icon>{{ isDarkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
     <button
       mat-icon-button
       id="header-menu-button"
@@ -14,23 +42,4 @@
       aria-label="Toggle navigation menu">
       <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
     </button>
-    <ul id="navbar-nav" [class.menu-open]="menuOpen">
-      <li class="nav-item">
-        <a class="nav-link" href="#about" (click)="closeMenu()">About</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#experience" (click)="closeMenu()">Experience</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#projects" (click)="closeMenu()">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#education" (click)="closeMenu()">Education</a>
-      </li>
-      <li class="nav-item nav-contact">
-        <a class="nav-link" href="#contact" (click)="closeMenu()">Let's talk</a>
-      </li>
-    </ul>
 </mat-toolbar>

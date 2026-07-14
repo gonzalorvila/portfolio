@@ -172,3 +172,8 @@
     transform: translate(2px, -2px);
   }
 }
+
+:host-context(html[data-theme='dark']) .project-number {
+  background: rgb(18 26 48 / 88%);
+  border-color: var(--color-border);
+}

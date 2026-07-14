@@ -160,6 +160,17 @@
   }
 }
 
+:host-context(html[data-theme='dark']) {
+  .portrait-frame {
+    border-color: rgb(199 210 254 / 15%);
+  }
+
+  .experience-badge {
+    background: rgb(18 26 48 / 92%);
+    border-color: var(--color-border);
+  }
+}
+
 .experience-badge {
   align-items: center;
   backdrop-filter: blur(12px);
