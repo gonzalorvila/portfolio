@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  public scrollRight(): void {
-    document.getElementById('header-navbar-contact')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'end'
-    });
+  public menuOpen = false;
+
+  public toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  public closeMenu(): void {
+    this.menuOpen = false;
   }
 }

@@ -4,7 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: beige;
+  background-color: var(--color-surface-solid);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 .project-card mat-card-header {
@@ -20,8 +23,7 @@
 }
 
 .project-card-name {
-  // Keep the card heading stable if Safari blocks the remote Poppins font.
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-family: var(--font-display) !important;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;

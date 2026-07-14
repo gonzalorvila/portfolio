@@ -1,55 +1,49 @@
 <section id="about" aria-labelledby="about-title">
-  <div id="about-grid-list">
-    <div class="about-image">
-      <mat-card class="about-page-card" id="about-image-card">
-        <img mat-card-lg-image src="assets/headshot-square.jpeg" width="200" height="200" alt="Headshot of Gonzalo">
-      </mat-card>
-    </div>
-    <div class="about-intro">
-      <h1 id="about-title">Front-end engineer building thoughtful web experiences</h1>
-      <p id="about-card-intro">
-        My name is Gonzalo Rodriguez-Vila. I am a front-end software engineer based in Spain.
-        I was born and raised in Madrid, Spain. In 2021, I graduated from Saint Louis University with a degree in Computer Engineering and a minor in Computer Science.
-        I have a strong passion for technology, and am always seeking to learn more about cutting-edge technologies and systems.
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <p class="eyebrow"><span aria-hidden="true"></span> Front-end engineer · Madrid, Spain</p>
+      <h1 id="about-title">I build thoughtful web experiences that feel <em>effortless.</em></h1>
+      <p class="hero-intro">
+        I’m Gonzalo, a front-end software engineer with 5+ years of experience creating reliable, responsive products with Angular, React, and TypeScript.
       </p>
+      <div class="hero-actions">
+        <a mat-flat-button class="primary-action" href="#projects">Explore my work <mat-icon aria-hidden="true">arrow_forward</mat-icon></a>
+        <a mat-stroked-button class="secondary-action" href="#contact">Get in touch</a>
+      </div>
+      <div class="hero-links" aria-label="Professional links">
+        <a href="https://github.com/gonzalorvila" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span><mat-icon aria-hidden="true">north_east</mat-icon>
+        </a>
+        <a href="mailto:gonzalorvila99@gmail.com">
+          <span>Email</span><mat-icon aria-hidden="true">north_east</mat-icon>
+        </a>
+      </div>
     </div>
-    <div class="about-details">
-      <mat-card class="about-page-card">
-        <mat-card-header class="about-page-card-header">
-          <mat-card-title>About</mat-card-title>
-        </mat-card-header>
-        <ul>
-          <li>5+ years of professional web development experience</li>
-          <li>Strong understanding of agile methodologies and the software development life cycle</li>
-          <li>Experience working with Angular, React, JavaScript, TypeScript, and responsive UIs</li>
-          <li>Great written and oral communication skills</li>
-        </ul>
-      </mat-card>
+    <div class="hero-visual" aria-label="Portrait of Gonzalo Rodriguez-Vila">
+      <div class="portrait-glow" aria-hidden="true"></div>
+      <div class="portrait-frame">
+        <img src="assets/headshot-full.jpeg" width="520" height="620" alt="Gonzalo Rodriguez-Vila, front-end software engineer">
+      </div>
+      <div class="experience-badge">
+        <strong>5+</strong>
+        <span>years building<br>for the web</span>
+      </div>
     </div>
-    <div class="about-details">
-      <mat-card class="about-page-card">
-        <mat-card-header class="about-page-card-header">
-          <mat-card-title>Basic Information</mat-card-title>
-        </mat-card-header>
-        <div id="about-page-info-container">
-          <div class="about-page-info-row">
-            <div class="about-page-info-row-title"><strong>Location:</strong></div>
-            <div class="about-page-info-row-content">Madrid, Spain</div>
-          </div>
-          <div class="about-page-info-row">
-            <div class="about-page-info-row-title"><strong>Email:</strong></div>
-            <div class="about-page-info-row-content" id="email-content"><a href="mailto:gonzalorvila99@gmail.com">gonzalorvila99@gmail.com</a></div>
-          </div>
-          <div class="about-page-info-row">
-            <div class="about-page-info-row-title"><strong>Degree:</strong></div>
-            <div class="about-page-info-row-content">B.S. in Computer Engineering, 2021</div>
-          </div>
-          <div class="about-page-info-row">
-            <div class="about-page-info-row-title"><strong>Languages:</strong></div>
-            <div class="about-page-info-row-content">Spanish, English, French (conversational)</div>
-          </div>
-        </div>
-      </mat-card>
+  </div>
+
+  <div class="about-surface" aria-label="About Gonzalo">
+    <div>
+      <p class="surface-label">What I bring</p>
+      <h2>Product thinking backed by solid engineering.</h2>
     </div>
+    <p>
+      I turn complex requirements into polished interfaces, collaborating closely with product, UX, QA, and back-end teams. I care about maintainable systems, accessible experiences, and the small details that make software pleasant to use.
+    </p>
+    <ul class="skill-list" aria-label="Core technologies">
+      <li>Angular</li>
+      <li>React</li>
+      <li>TypeScript</li>
+      <li>Responsive UI</li>
+    </ul>
   </div>
 </section>
