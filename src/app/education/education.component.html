@@ -1,18 +1,18 @@
-<div id="education">
-  <div class="page-title">My Education</div>
-  <mat-grid-list #grid id="education-grid-list" [cols]="gridCols" [rowHeight]="rowHeight">
-    <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" id="education-page-school-tile">
+<section id="education" aria-labelledby="education-title">
+  <h2 class="page-title" id="education-title">My Education</h2>
+  <div id="education-grid-list">
+    <div id="education-page-school-tile">
       <div id="education-page-school-tile-content">
         <div>Saint Louis University</div>
         <div>2017-2021</div>
       </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows">
+    </div>
+    <div class="education-degree-tile">
       <div id="education-page-degree-content">
         <div id="degree-name">Bachelor of Science, Computer Engineering</div>
         <div id="college-name">Parks College of Engineering, Aviation, and Technology</div>
         <ul>
-          <li>Completed Computer Engineering degree with a Computer Sciene minor</li>
+          <li>Completed a Computer Engineering degree with a Computer Science minor</li>
           <li>GPA: 3.4/4.0</li>
           <li>First two years in Madrid campus, graduated from main Campus in Saint Louis, MO</li>
           <li>
@@ -25,6 +25,6 @@
           </li>
         </ul>
       </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
+    </div>
+  </div>
+</section>

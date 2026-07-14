@@ -1,55 +1,70 @@
-@media (max-width: 495px) {
-  #about-image-card {
-    transform: scale(0.5);
-  }
-  #about-page-info-container {
-    padding-inline-start: 0 !important;
-  }
-  .about-page-card-header {
-    padding: 0;
-  }
-}
-
 #about {
-  @media (max-width: 460px) {
-    padding-top: 0;
-  }
-
   padding-top: 2em;
+  scroll-margin-top: 1rem;
 }
 
 #about-grid-list {
-  @media (max-width: calc(1140px + 2em)) {
-    margin: 2em;
-    max-width: 100%;
-  }
-  @media (max-width: 460px) {
-    margin: 0;
-    max-width: 100%;
-  }
+  align-items: start;
   background-color: beige;
   border-radius: 4px;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 2em auto;
   max-width: 1140px;
 }
 
+.about-image,
+.about-intro,
+.about-details {
+  min-width: 0;
+}
+
+.about-image {
+  align-self: center;
+  grid-column: span 1;
+}
+
+.about-intro {
+  align-self: center;
+  grid-column: span 3;
+  padding: 1.5rem;
+
+  h1 {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+  }
+}
+
+.about-details {
+  grid-column: span 2;
+}
+
 #about-image-card {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 1rem;
 
   img {
-    object-fit: contain;
+    height: auto;
+    max-width: 200px;
+    object-fit: cover;
     border-radius: 50%;
+    width: 100%;
   }
 }
 
 #about-card-intro, .about-page-card {
-  @media (max-width: 460px) {
-    padding: 0 1em;
-  }
-  padding: 0 2em;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#about-card-intro {
+  margin: 0;
+  padding: 0;
 }
 
 #about-page-info-container {
@@ -68,7 +83,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  height: auto;
+  padding: 1rem 1.5rem;
 }
 
 .about-page-card-header {
@@ -80,14 +97,61 @@
 .about-page-info-row {
   display: flex;
   flex-direction: row;
+  gap: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 .about-page-info-row-title {
-  flex: 0 0 33.3%;
+  flex: 0 0 30%;
   text-transform: uppercase;
 }
 
 .about-page-info-row-content {
-  flex: 0 0 66.6%;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
+@media (max-width: 950px) {
+  #about-grid-list {
+    margin: 2em;
+  }
+
+  .about-details {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  #about-grid-list {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .about-image,
+  .about-intro,
+  .about-details {
+    grid-column: 1;
+  }
+
+  #about-image-card {
+    padding: 1rem;
+  }
+
+  .about-intro {
+    padding: 1.25rem;
+  }
+
+  .about-page-card {
+    padding: 1rem 1.25rem;
+  }
+
+  #about-page-info-container {
+    padding-inline: 1rem;
+  }
+
+  .about-page-info-row {
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+  }
+}

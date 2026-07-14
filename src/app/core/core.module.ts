@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CoreComponent } from './core.component';
 import { CoreRoutingModule } from './core-routing.module';
@@ -26,7 +26,6 @@ import { ContactModule } from '../contact/contact.module';
     ExperienceModule,
     ProjectsModule,
     ContactModule
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  ]
 })
 export class CoreModule { }

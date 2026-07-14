@@ -1,27 +1,39 @@
-# MyPortfolio
+# Gonzalo's Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+A responsive single-page portfolio built with Angular and Angular Material. It presents my professional experience, education, software projects, and a Formspree-powered contact form.
 
-## Development server
+## Local development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Requirements:
 
-## Code scaffolding
+- Node.js 16.13 or newer
+- npm 8 or newer
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install dependencies and start the development server:
 
-## Build
+```bash
+npm install
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Open `http://localhost:4200/`. The application reloads when source files change.
 
-## Running unit tests
+## Available commands
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm start       # Run the development server
+npm run build   # Create a production build in docs/
+npm run watch   # Rebuild when files change
+npm test        # Run the Karma unit tests
+```
 
-## Running end-to-end tests
+The production build uses `/portfolio/` as its base URL because the site is hosted as a GitHub Pages project site.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Updating content
 
-## Further help
+- About and contact details are in `src/app/about` and `src/app/contact`.
+- Experience entries are in `src/app/experience/experience.component.html`.
+- Project data is in `src/app/projects/projects.component.ts`.
+- Global colors and the Angular Material theme are in `src/styles.scss`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The contact form submits to Formspree. If the form endpoint changes, update it in `src/app/contact/contact.component.ts`.

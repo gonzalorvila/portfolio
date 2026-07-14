@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CdkScrollableModule } from '@angular/cdk/scrolling';
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './imports/material.module';
 
 
@@ -12,14 +11,11 @@ import { MaterialModule } from './imports/material.module';
   imports: [
     CommonModule,
     MaterialModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CdkScrollableModule
+    FormsModule
   ],
   exports: [
     MaterialModule,
-    FormsModule,
-    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
