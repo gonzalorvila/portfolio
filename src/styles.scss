@@ -153,26 +153,6 @@ button:focus-visible {
   flex-grow: 1;
 }
 
-app-experience {
-  .experience-header-right-align > .mat-content {
-    justify-content: space-between;
-  }
-
-  .mat-content > mat-panel-title, .mat-content > mat-panel-description {
-    flex: 0 0 auto;
-  }
-
-  .experience-page-panel > .mat-expansion-panel-content {
-    background-color: var(--color-surface-solid);
-    font-family: var(--font-body) !important;
-  }
-  .mat-expansion-panel-header {
-    font-family: var(--font-display) !important;
-  }
-
-}
-
-
 .email-sent-snackbar * {
   font-family: var(--font-body) !important;
 }

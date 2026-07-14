@@ -1,16 +1,22 @@
 <section id="projects" class="projects-section" aria-labelledby="projects-title">
-  <h2 class="page-title" id="projects-title">Projects</h2>
-  <mat-tab-group color="primary" id="projects-tab-group" mat-align-tabs="center" fitInkBarToContent dynamicHeight="true">
-    <span *ngFor="let project of projects; let i = index;">
-      <mat-tab [label]="project.name">
-        <app-project-card
+  <header class="section-heading">
+    <p class="section-eyebrow">Selected work</p>
+    <h2 class="page-title" id="projects-title">Projects that show how I think and build.</h2>
+    <p class="section-intro">A selection of web, desktop, and systems projects spanning interface design, collaboration, and low-level problem solving.</p>
+  </header>
+
+  <div class="projects-grid">
+    <app-project-card
+        *ngFor="let project of projects; let i = index"
         [projectName]="project.name"
+        [projectCategory]="project.category"
         [projectDescription]="project.description"
+        [projectHighlights]="project.highlights"
+        [projectTechnologies]="project.technologies"
         [projectLink]="project.link"
         [projectImage]="project.imageUrl"
-        [projectIcon]="project.icon">
-      </app-project-card>
-    </mat-tab>
-  </span>
-</mat-tab-group>
+        [projectIcon]="project.icon"
+        [projectNumber]="i + 1">
+    </app-project-card>
+  </div>
 </section>

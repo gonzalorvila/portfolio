@@ -1,33 +1,210 @@
-#experience-page-accordion {
-  display: block;
-  margin: 2em auto;
+.experience-section {
+  margin: 0 auto;
+  max-width: var(--page-width);
+  padding-inline: 1.5rem;
 }
 
-.experience-page-panel {
+.section-heading {
+  margin: 0 auto clamp(2.5rem, 6vw, 4.5rem);
+  max-width: 800px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.85rem;
+  padding-top: var(--section-space);
+  text-transform: uppercase;
+}
+
+.page-title {
+  padding-top: 0;
+}
+
+.section-intro {
+  color: var(--color-muted);
+  line-height: 1.75;
+  margin: 1.25rem auto 0;
+  max-width: 700px;
+}
+
+.experience-timeline {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 0 0 0 2.75rem;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(var(--color-primary), rgb(79 70 229 / 12%));
+    bottom: 0;
+    content: '';
+    left: 0.55rem;
+    position: absolute;
+    top: 1rem;
+    width: 2px;
+  }
+}
+
+.timeline-item {
+  padding-bottom: 1.5rem;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline-marker {
+  background: var(--color-surface-solid);
+  border: 3px solid #a5b4fc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--color-bg);
+  height: 1.15rem;
+  left: -2.75rem;
+  position: absolute;
+  top: 1.65rem;
+  width: 1.15rem;
+}
+
+.current-marker {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.experience-card {
+  background: var(--color-surface-solid);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm) !important;
-  margin: auto;
-  max-width: 1100px;
-  margin-bottom: 0.5em;
+  border-radius: var(--radius-md);
+  box-shadow: 0 14px 45px rgb(23 32 51 / 6%);
+  padding: clamp(1.35rem, 4vw, 2.25rem);
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
 
-  .mat-expansion-panel-content {
-    background-color: var(--color-surface-solid);
-  }
-
-  &:first-of-type {
-    margin-top: 2em !important;
+  &:hover {
+    border-color: rgb(79 70 229 / 24%);
+    box-shadow: var(--shadow-card);
+    transform: translateX(3px);
   }
 }
 
-.experience-header-right-align,
-.experience-header-right-align:hover {
-  background: linear-gradient(100deg, var(--color-primary-dark), var(--color-primary)) !important;
+.current-role {
+  border-color: rgb(79 70 229 / 22%);
 }
 
-::ng-deep .experience-header-right-align > .mat-expansion-indicator:after {
-  color: white;
+.experience-header {
+  align-items: flex-start;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+
+  h3 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    margin: 0.25rem 0 0;
+  }
 }
 
-.education-white-text {
-  color: white;
+.company-name {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.experience-date {
+  color: var(--color-muted);
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0;
+  text-align: right;
+}
+
+.current-label {
+  background: rgb(16 185 129 / 12%);
+  border-radius: 999px;
+  color: #047857;
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  margin-right: 0.45rem;
+  padding: 0.3rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+
+  li {
+    color: var(--color-muted);
+    line-height: 1.65;
+    padding-left: 1.35rem;
+    position: relative;
+  }
+
+  li::before {
+    color: var(--color-primary);
+    content: '→';
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+  }
+}
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    background: var(--color-bg-alt);
+    border-radius: 999px;
+    color: var(--color-primary-dark);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.4rem 0.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-section {
+    padding-inline: 1rem;
+  }
+
+  .experience-timeline {
+    padding-left: 1.65rem;
+
+    &::before {
+      left: 0.3rem;
+    }
+  }
+
+  .timeline-marker {
+    height: 0.9rem;
+    left: -1.65rem;
+    top: 1.55rem;
+    width: 0.9rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .experience-date {
+    text-align: left;
+  }
 }

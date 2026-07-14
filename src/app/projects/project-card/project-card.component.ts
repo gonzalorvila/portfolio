@@ -7,8 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectCardComponent {
   @Input() projectName = '';
+  @Input() projectCategory = '';
   @Input() projectDescription = '';
+  @Input() projectHighlights: string[] = [];
+  @Input() projectTechnologies: string[] = [];
   @Input() projectImage?: string;
   @Input() projectIcon?: string;
   @Input() projectLink = '';
+  @Input() projectNumber = 0;
 }
