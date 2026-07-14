@@ -71,6 +71,10 @@
   padding-inline-start: 40px;
   margin-top: 1em;
   margin-bottom: 1em;
+
+  @media (max-width: 495px) {
+    padding-inline-start: 0 !important;
+  }
 }
 
 #email-content {
@@ -91,6 +95,10 @@
 .about-page-card-header {
   mat-card-title {
     font-family: Poppins, sans-serif;
+  }
+
+  @media (max-width: 495px) {
+    padding: 0;
   }
 }
 

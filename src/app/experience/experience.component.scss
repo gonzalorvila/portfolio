@@ -12,6 +12,10 @@
   .mat-expansion-panel-content {
     background-color: beige;
   }
+
+  &:first-of-type {
+    margin-top: 2em !important;
+  }
 }
 
 .experience-header-right-align,
