@@ -37,6 +37,10 @@ export class CoreComponent implements AfterViewInit, OnDestroy {
       element.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
     });
 
+    const scrollContainer = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+      ? null
+      : this.elementRef.nativeElement.querySelector('.page-content');
+
     this.revealObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) {
@@ -47,7 +51,7 @@ export class CoreComponent implements AfterViewInit, OnDestroy {
         this.revealObserver?.unobserve(entry.target);
       });
     }, {
-      root: this.elementRef.nativeElement.querySelector('.page-content'),
+      root: scrollContainer,
       rootMargin: '0px 0px -10% 0px',
       threshold: 0.12
     });
