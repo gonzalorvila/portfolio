@@ -37,7 +37,7 @@ export class CoreComponent implements AfterViewInit, OnDestroy {
       element.style.setProperty('--reveal-delay', `${(index % 4) * 65}ms`);
     });
 
-    const scrollContainer = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+    const scrollContainer = window.matchMedia('(max-width: 1024px), (hover: none)').matches
       ? null
       : this.elementRef.nativeElement.querySelector('.page-content');
 

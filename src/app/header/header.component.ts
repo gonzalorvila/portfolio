@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public ngAfterViewInit(): void {
-    const scrollContainer = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+    const scrollContainer = window.matchMedia('(max-width: 1024px), (hover: none)').matches
       ? null
       : document.querySelector('.page-content');
     const sections = Array.from(document.querySelectorAll<HTMLElement>('main section[id]'));

@@ -59,6 +59,9 @@ $my-theme: mat.define-light-theme((
 html, body {
   height: 100%;
   background: #f7f8fc;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 :root {
@@ -281,7 +284,7 @@ html[data-theme='dark'] {
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px), (hover: none) {
   html,
   body {
     height: auto;
@@ -302,7 +305,7 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px), (hover: none) {
   a,
   button {
     touch-action: manipulation;

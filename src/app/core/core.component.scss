@@ -21,13 +21,14 @@
     var(--color-bg);
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px), (hover: none) {
   :host {
     height: auto;
     min-height: 100dvh;
   }
 
   .page-content {
+    max-width: 100%;
     overflow: visible;
   }
 }
