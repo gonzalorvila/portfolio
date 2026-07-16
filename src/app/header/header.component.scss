@@ -156,11 +156,15 @@
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
-  :host {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+@media (max-width: 1024px), (hover: none) {
+  #header-toolbar {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgb(247 248 252 / 98%);
+  }
+
+  :host-context(html[data-theme='dark']) #header-toolbar {
+    background: rgb(11 16 32 / 98%);
   }
 }
 
