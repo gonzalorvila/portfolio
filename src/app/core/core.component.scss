@@ -21,6 +21,17 @@
     var(--color-bg);
 }
 
+@media (hover: none) and (pointer: coarse) {
+  :host {
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  .page-content {
+    overflow: visible;
+  }
+}
+
 .skip-link {
   background: var(--color-surface-solid);
   color: var(--color-text);

@@ -156,6 +156,14 @@
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  :host {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+}
+
 @media (max-width: 460px) {
   .logo-name {
     display: none;

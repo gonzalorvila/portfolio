@@ -22,7 +22,9 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public ngAfterViewInit(): void {
-    const scrollContainer = document.querySelector('.page-content');
+    const scrollContainer = window.matchMedia('(hover: none) and (pointer: coarse)').matches
+      ? null
+      : document.querySelector('.page-content');
     const sections = Array.from(document.querySelectorAll<HTMLElement>('main section[id]'));
 
     if (!('IntersectionObserver' in window)) {

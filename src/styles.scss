@@ -281,6 +281,15 @@ html[data-theme='dark'] {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+  }
+
+}
+
 @media (max-width: 820px) {
   html[data-theme='dark'] #navbar-nav {
     background: rgb(18 26 48 / 97%);
@@ -291,6 +300,13 @@ a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  a,
+  button {
+    touch-action: manipulation;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
